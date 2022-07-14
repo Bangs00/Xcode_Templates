@@ -17,7 +17,7 @@ class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, Storyboard
 
     // MARK: - Life Cycles
     class func create(with viewModel: ___VARIABLE_sceneIdentifier___ViewModel) -> ___VARIABLE_sceneIdentifier___ViewController {
-        let vc = ___VARIABLE_sceneIdentifier___ViewController.instantiateViewController()
+        let vc = ___VARIABLE_sceneIdentifier___ViewController.instantiateViewControllerFromNib()
         vc.viewModel = viewModel
         return vc
     }
