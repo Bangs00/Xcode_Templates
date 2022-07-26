@@ -40,7 +40,9 @@ extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
     }
     // Dynamic Height
     static func fittingSize(_ viewData: Any?, width: CGFloat) -> CGSize {
-        let view = ___VARIABLE_reuseIdentifier___CollectionReusableView()
+        guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
+            return .zero
+        }
         view.configure(viewData)
 
         let targetSize = CGSize(width: width, height: UIView.layoutFittingCompressedSize.height)
@@ -48,7 +50,9 @@ extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
     }
     // Dynamic Width
     static func fittingSize(_ viewData: Any?, height: CGFloat) -> CGSize {
-        let view = ___VARIABLE_reuseIdentifier___CollectionReusableView()
+        guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
+            return .zero
+        }
         view.configure(viewData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: height)
@@ -56,7 +60,9 @@ extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
     }
     // Dynamic Width, Height
     static func fittingSize(_ viewData: Any?) -> CGSize {
-        let view = ___VARIABLE_reuseIdentifier___CollectionReusableView()
+        guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
+            return .zero
+        }
         view.configure(viewData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: UIView.layoutFittingCompressedSize.height)

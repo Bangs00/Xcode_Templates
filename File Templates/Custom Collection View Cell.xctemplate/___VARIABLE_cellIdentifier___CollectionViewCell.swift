@@ -40,7 +40,9 @@ extension ___VARIABLE_cellIdentifier___CollectionViewCell {
     }
     // Dynamic Height
     static func fittingSize(_ cellData: Any?, width: CGFloat) -> CGSize {
-        let cell = ___VARIABLE_cellIdentifier___CollectionViewCell()
+        guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
+            return .zero
+        }
         cell.configure(cellData)
 
         let targetSize = CGSize(width: width, height: UIView.layoutFittingCompressedSize.height)
@@ -48,7 +50,9 @@ extension ___VARIABLE_cellIdentifier___CollectionViewCell {
     }
     // Dynamic Width
     static func fittingSize(_ cellData: Any?, height: CGFloat) -> CGSize {
-        let cell = ___VARIABLE_cellIdentifier___CollectionViewCell()
+        guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
+            return .zero
+        }
         cell.configure(cellData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: height)
@@ -56,7 +60,9 @@ extension ___VARIABLE_cellIdentifier___CollectionViewCell {
     }
     // Dynamic Width, Height
     static func fittingSize(_ cellData: Any?) -> CGSize {
-        let cell = ___VARIABLE_cellIdentifier___CollectionViewCell()
+        guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
+            return .zero
+        }
         cell.configure(cellData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: UIView.layoutFittingCompressedSize.height)
