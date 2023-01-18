@@ -34,36 +34,35 @@ class ___VARIABLE_cellIdentifier___CollectionViewCell: UICollectionViewCell {
 }
 
 extension ___VARIABLE_cellIdentifier___CollectionViewCell {
-    func configure(_ cellData: Any?) {
-        guard let cellData = cellData else { return }
+    func configure(with cellData: Any) {
         self.cellData = cellData
     }
     // Dynamic Height
-    static func fittingSize(_ cellData: Any?, width: CGFloat) -> CGSize {
+    static func fittingSize(_ cellData: Any, width: CGFloat) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }
-        cell.configure(cellData)
+        cell.configure(with: cellData)
 
         let targetSize = CGSize(width: width, height: UIView.layoutFittingCompressedSize.height)
         return cell.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
     }
     // Dynamic Width
-    static func fittingSize(_ cellData: Any?, height: CGFloat) -> CGSize {
+    static func fittingSize(_ cellData: Any, height: CGFloat) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }
-        cell.configure(cellData)
+        cell.configure(with: cellData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: height)
         return cell.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .required)
     }
     // Dynamic Width, Height
-    static func fittingSize(_ cellData: Any?) -> CGSize {
+    static func fittingSize(_ cellData: Any) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }
-        cell.configure(cellData)
+        cell.configure(with: cellData)
 
         let targetSize = CGSize(width: UIView.layoutFittingCompressedSize.width, height: UIView.layoutFittingCompressedSize.height)
         return cell.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .fittingSizeLevel)

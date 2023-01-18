@@ -12,13 +12,14 @@ class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, Storyboard
     // MARK: - Outlets
 
     // MARK: - Vairables
-    var viewModel: ___VARIABLE_sceneIdentifier___ViewModel!
+    private var viewModel: ___VARIABLE_sceneIdentifier___ViewModel!
     
 
     // MARK: - Life Cycles
     class func create(with viewModel: ___VARIABLE_sceneIdentifier___ViewModel) -> ___VARIABLE_sceneIdentifier___ViewController {
         let vc = ___VARIABLE_sceneIdentifier___ViewController.instantiateViewControllerFromNib()
         vc.viewModel = viewModel
+
         return vc
     }
     
@@ -32,7 +33,7 @@ class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, Storyboard
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-
+        viewModel.viewWillAppear()
     }
     
     func bind(to viewModel: ___VARIABLE_sceneIdentifier___ViewModel) {

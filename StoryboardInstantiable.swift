@@ -1,8 +1,9 @@
 //
 //  StoryboardInstantiable.swift
-//  ExampleMVVM
+//  ___PROJECTNAME___
 //
-//  Created by Oleh Kudinov on 03.03.19.
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright (c) ___YEAR___ All rights reserved.
 //
 
 import UIKit
