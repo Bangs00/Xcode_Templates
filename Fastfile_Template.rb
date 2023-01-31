@@ -326,7 +326,7 @@ def get_debug_build_number_from_firebase
   firebase_version_number = firebase_app_distribution_get_latest_release(
     app: Constant::DEBUG_FIREBASE_APP_ID,
     firebase_cli_token: Constant::FIREBASE_CLI_TOKEN
-  ).nil? ? "1" : firebase_app_distribution_get_latest_release(
+  ).nil? ? "0.0.0" : firebase_app_distribution_get_latest_release(
     app: Constant::DEBUG_FIREBASE_APP_ID,
     firebase_cli_token: Constant::FIREBASE_CLI_TOKEN
   )[:displayVersion]
@@ -350,7 +350,7 @@ def get_release_build_number_from_firebase
   firebase_version_number = firebase_app_distribution_get_latest_release(
     app: Constant::RELEASE_FIREBASE_APP_ID,
     firebase_cli_token: Constant::FIREBASE_CLI_TOKEN
-  ).nil? ? "1" : firebase_app_distribution_get_latest_release(
+  ).nil? ? "0.0.0" : firebase_app_distribution_get_latest_release(
     app: Constant::RELEASE_FIREBASE_APP_ID,
     firebase_cli_token: Constant::FIREBASE_CLI_TOKEN
   )[:displayVersion]
