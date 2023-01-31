@@ -10,7 +10,7 @@
   * Fastfile_Template
 <br/><br/>
 
-# Usage
+# Template Usage
 * ```~/Library/Developer/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Template```, ```Project Template```에 저장
   * 로컬 저장이므로 여러 기기에서 사용하려면 각 기기마다 저장해야 함
 
