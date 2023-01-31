@@ -35,6 +35,8 @@ ps. ```File Template```, ```Project Template``` 디렉토리가 존재하지 않
       * 아래에 있는 ```StoryboradInstantiable.swift```파일의 ```instantiateViewController()``` 함수가 필요함
     * ```ViewModel.swift```: Input, Output Protocol 및 ViewModel Actions 작성 영역이 나누어져 있음
     * ```ViewController.xib```: 1개의 ```ViewController```가 존재하며 해당 ViewController의 ```Background Color```가 ```Default```로 설정되어 있음
+  * StoryboardInstantiable
+    * Storyboard 혹은 Nib에서 ViewController를 인스턴스화 하는 protocol을 UIViewController에서 준수하는 코드가 확장으로 작성되어 있음
 * Project Template
   * Custom iOS Application
     * MVVM + Clean Architecture + Rx
@@ -65,3 +67,10 @@ case "${CONFIGURATION}" in
         ;;
 esac
 ```
+<br/><br/>
+
+# Reference
+* <https://github.com/kudoleh/iOS-Clean-Architecture-MVVM>
+* <https://github.com/sergdort/CleanArchitectureRxSwift>
+* <https://firebase.google.com/docs/app-distribution/ios/distribute-fastlane?hl=en>
+* <https://docs.fastlane.tools/>
