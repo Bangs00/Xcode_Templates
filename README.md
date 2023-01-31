@@ -51,7 +51,7 @@ ps. ```File Template```, ```Project Template``` 디렉토리가 존재하지 않
   * Fastfile_Template
     * Testflight 및 Firebase App Distribution에 Debug, Release 빌드를 업로드하는 lane들이 선언되어 있음
     * Firebase App Distribution에서 Debug, Release 빌드 2개를 등록하고 ```GoogleService-Info.plist``` 파일을 각 빌드에 따라 이름을 변경하여 프로젝트에 추가해주어야 하며 프로젝트 파일에서 Build Phase에 Run Script Phase를 Compile Source Phase위에 생성하고 빌드시에 scheme에 따라 복사해서 최상위 디렉토리에 생성하도록 해야 함
-      * EXAMPLE
+      * **Run Script example**
 ```
 PATH_TO_GOOGLE_PLISTS="${PROJECT_DIR}/PROJECT_NAME/Resources"
 
