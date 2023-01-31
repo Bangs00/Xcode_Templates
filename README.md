@@ -11,15 +11,15 @@
 <br/><br/>
 
 # Template Usage
-* ```~/Library/Developer/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Template```, ```Project Template```에 저장
+* ```~/Library/Developer/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Templates```, ```Project Templates```에 저장
   * 로컬 저장이므로 여러 기기에서 사용하려면 각 기기마다 저장해야 함
 
 OR
-* ```/Application/Xcode.app/Contents/Developer/Library/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Template```, ```Project Template```에 저장
+* ```/Application/Xcode.app/Contents/Developer/Library/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Templates```, ```Project Templates```에 저장
   * 로컬 저장인 것은 마찬가지이나 Xcode 어플리케이션 하위에 저장하는 것이므로 Xcode 업데이트시 다시 저장해야 함
 <br/><br/>
 
-ps. ```File Template```, ```Project Template``` 디렉토리가 존재하지 않을 경우 해당 디렉토리 생성 필요
+ps. ```File Templates```, ```Project Templates``` 디렉토리가 존재하지 않을 경우 해당 디렉토리 생성 필요
 <br/><br/>
 
 # Detail
