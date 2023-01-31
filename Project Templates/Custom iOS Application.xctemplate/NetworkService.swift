@@ -91,7 +91,7 @@ extension DefaultNetworkService: NetworkService {
             let urlRequest = try endpoint.urlRequest(with: config)
             return AF.rx.request(urlRequest: urlRequest, interceptor: interceptor)
                 .debug("\(T.self)", trimOutput: false)
-                .validateBodyStatusCode()
+//                .validateBodyStatusCode()
                 .responseJSON()
                 .observe(on: MainScheduler.instance)
                 .map({ request in

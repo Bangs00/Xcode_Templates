@@ -52,7 +52,7 @@
 		<string>Infrastructure/Network/Endpoint.swift</string>
 		<string>Infrastructure/Network/NetworkService.swift</string>
 		<string>Infrastructure/Network/NetworkInterceptor.swift</string>
-		<string>Resources/info.plist</string>
+		<string>Resources/Info.plist</string>
 		<string>../Podfile</string>
 	</array>
 	<key>Definitions</key>
@@ -416,14 +416,16 @@
 				<string>Network</string>
 			</array>
 		</dict>
-		<key>Resources/info.plist</key>
+		<key>Resources/Info.plist</key>
 		<dict>
 			<key>Path</key>
-			<string>info.plist</string>
+			<string>Info.plist</string>
 			<key>Group</key>
 			<array>
 				<string>Resources</string>
 			</array>
+			<key>TargetIndices</key>
+			<array/>
 		</dict>
 		<key>../Podfile</key>
 		<dict>
