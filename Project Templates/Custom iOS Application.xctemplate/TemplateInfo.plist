@@ -54,6 +54,7 @@
 		<string>Infrastructure/Network/NetworkInterceptor.swift</string>
 		<string>Resources/Info.plist</string>
 		<string>../Podfile</string>
+		<string>../Makefile</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
@@ -431,6 +432,13 @@
 		<dict>
 			<key>Path</key>
 			<string>Podfile</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
+		<key>../Makefile</key>
+		<dict>
+			<key>Path</key>
+			<string>Makefile</string>
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
