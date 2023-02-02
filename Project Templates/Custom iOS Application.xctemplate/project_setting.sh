@@ -5,10 +5,8 @@ WARNING_TEXT_COLOR='\033[0m\033[1;33m'
 DEFAULT_TEXT_COLOR='\033[0;37m'
 
 echo "${DEFAULT_TEXT_COLOR}Removing ${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${DEFAULT_TEXT_COLOR} file"
-unset app_delegate_file_uuids
 unset app_delegate_file_uuid
 
-app_delegate_file_uuids=`sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj`
 app_delegate_file_uuid=`sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj | head -n 1`
 
 if [ -z "$app_delegate_file_uuid" ]; then
@@ -16,7 +14,7 @@ if [ -z "$app_delegate_file_uuid" ]; then
 	exit 1
 fi
 
-if [ `$app_delegate_file_uuids | wc -l` -lt 2 ]; then
+if [ `sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj | wc -l` -lt 2 ]; then
 	echo "${WARNING_TEXT_COLOR}Already ${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${WARNING_TEXT_COLOR} file removed"
 else
 	sed -i '' -e "/$app_delegate_file_uuid/d" ___PROJECTNAME___.xcodeproj/project.pbxproj
@@ -68,7 +66,6 @@ unset SUCCESS_TEXT_COLOR
 unset FAILURE_TEXT_COLOR
 unset WARNING_TEXT_COLOR
 unset DEFAULT_TEXT_COLOR
-unset app_delegate_file_uuids
 unset app_delegate_file_uuid
 
 pod repo update
