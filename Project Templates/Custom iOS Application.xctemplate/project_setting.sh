@@ -7,16 +7,16 @@ DEFAULT_TEXT_COLOR='\033[0;37m'
 echo "${DEFAULT_TEXT_COLOR}Removing ${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${DEFAULT_TEXT_COLOR} file"
 unset app_delegate_file_uuid
 
+app_delegate_file_uuid=`sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj | head -n 1`
+
+if [ -z "$app_delegate_file_uuid" ]; then
+	echo "${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${FAILURE_TEXT_COLOR} file reference UUID not found from project file"
+	exit 1
+fi
+
 if [ `sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj | wc -l` -lt 2 ]; then
 	echo "${WARNING_TEXT_COLOR}Already ${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${WARNING_TEXT_COLOR} file removed"
 else
-	app_delegate_file_uuid=`sed -n '/AppDelegate.swift/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj | head -n 1`
-
-	if [ -z "$app_delegate_file_uuid" ]; then
-		echo "${FILE_PROJECT_COLOR}___PROJECTNAME___/AppDelegate.swift${FAILURE_TEXT_COLOR} file reference UUID not found from project file"
-		exit 1
-	fi
-
 	sed -i '' -e "/$app_delegate_file_uuid/d" ___PROJECTNAME___.xcodeproj/project.pbxproj
 
 	if [ $? -ne 0 ]; then
