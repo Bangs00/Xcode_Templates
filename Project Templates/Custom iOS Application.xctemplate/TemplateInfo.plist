@@ -54,7 +54,7 @@
 		<string>Infrastructure/Network/NetworkInterceptor.swift</string>
 		<string>Resources/Info.plist</string>
 		<string>../Podfile</string>
-		<string>../Makefile</string>
+		<string>../project_setting.sh</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
@@ -435,10 +435,10 @@
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
-		<key>../Makefile</key>
+		<key>../project_setting.sh</key>
 		<dict>
 			<key>Path</key>
-			<string>Makefile</string>
+			<string>project_setting.sh</string>
 			<key>TargetIndices</key>
 			<array/>
 		</dict>
