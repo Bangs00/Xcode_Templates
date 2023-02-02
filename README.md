@@ -9,6 +9,11 @@
 * Fastlane Fastfile Template
   * Fastfile_Template
 <br/><br/>
+# Require
+* Cocoapods
+* Fastfile_Template 사용시
+  * Fastlane
+<br/><br/>
 
 # Template Usage
 * ```~/Library/Developer/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Templates```, ```Project Templates```에 저장
@@ -18,6 +23,19 @@ OR
 * ```/Application/Xcode.app/Contents/Developer/Library/Xcode/Templates``` 경로에 Template 종류에 따라 하위 디렉토리인 ```File Templates```, ```Project Templates```에 저장
   * 로컬 저장인 것은 마찬가지이나 Xcode 어플리케이션 하위에 저장하는 것이므로 Xcode 업데이트시 다시 저장해야 함
 <br/><br/>
+
+* File Template
+  * 파일 생성시 원하는 File Template 선택해서 생성
+* Project Template
+  * Custom iOS Application
+    * 프로젝트 생성시 프로젝트 이름만 설정
+    * 터미널로 프로젝트 디렉토리에서 ```project_setting.sh``` 실행
+* Fastlane Template
+  * Fastfile_Template
+    * 프로젝트 디렉토리에서 ```fastlane init``` 명령어 실행
+    * ```Fastfile_Template``` 파일명을 ```Fastfile```로 변경
+    * 프로젝트 디렉토리의 ```fastlane```디렉토리 안에 파일명을 변경한 ```Fastfile``` 덮어쓰기
+    * 덮어쓰기한 ```Fastfile```에서 ```Constant``` 모듈안에 값 변경
 
 ps. ```File Templates```, ```Project Templates``` 디렉토리가 존재하지 않을 경우 해당 디렉토리 생성 필요
 <br/><br/>
@@ -41,12 +59,8 @@ ps. ```File Templates```, ```Project Templates``` 디렉토리가 존재하지 �
   * Custom iOS Application
     * MVVM + Clean Architecture + Rx
       * Alamofire, RxSwift, RxAlamofire에 의존성이 존재하므로 염연히 말하면 Clean Architecture가 아님
-    * Cocoapods를 통해 Alamofire, RxSwift, RxAlamofire를 설치해야 함
-    * 최상위 폴더에 있는 ```AppDelegate.swift```, ```ContentView.swift``` 파일을 삭제해야 함
-      * 차후 Template자체적으로 제외할 수 있는 방법 추가 예정
+    * Cocoapods 의존성 관리자를 사용하므로 Cocoapods이 필수
     * 프로젝트 파일에서 메인 앱 타겟의 Build Settings에서 User-Defined 항목에 API_BASE_URL 값을 scheme에 따라 설정해야 함
-    * 프로젝트 파엘에서 메인 앱 타겟의 Build Settings에서 Info.plist 파일 경로를 설정해야함
-      * Template에서는 ```PROJECT/Resources``` 경로에 Info.plist파일을 생성함
 * Fastlane Fastfile Template
   * Fastfile_Template
     * Testflight 및 Firebase App Distribution에 Debug, Release 빌드를 업로드하는 lane들이 선언되어 있음
