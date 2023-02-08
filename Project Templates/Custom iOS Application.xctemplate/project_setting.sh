@@ -10,7 +10,7 @@ unset_variables() {
 	unset ___PROJECTNAME____LAUNCHSCREEN_FILE_UUID
 	unset ___PROJECTNAME____LAUNCHSCREEN_FILE_REF_STRING
 	unset ___PROJECTNAME____IS_SET_API_URL
-    unset ___PROJECTNAME____API_BASE_URL
+	unset ___PROJECTNAME____API_BASE_URL
 }
 
 unset_variables
