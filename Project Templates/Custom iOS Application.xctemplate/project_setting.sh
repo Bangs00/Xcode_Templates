@@ -105,9 +105,9 @@ else
 fi
 
 # Moving Assets.xcassets
-echo "\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}Moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____DEFAULT_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+echo "\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}Moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____DEFAULT_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets${___PROJECTNAME____DEFAULT_TEXT_COLOR}."
 if [ ! -d "./___PROJECTNAME___/Assets.xcassets" ]; then
-	echo "${___PROJECTNAME____WARNING_TEXT_COLOR}Already ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____WARNING_TEXT_COLOR} file moved to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+	echo "${___PROJECTNAME____WARNING_TEXT_COLOR}Already ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____WARNING_TEXT_COLOR} file moved to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets${___PROJECTNAME____WARNING_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 else
 	___PROJECTNAME____ASSETS_FILE_UUID=`sed -n '/Assets.xcassets/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj`
 
@@ -146,19 +146,19 @@ else
 	mv ___PROJECTNAME___/Assets.xcassets ___PROJECTNAME___/Resources/Assets.xcassets
 
 	if [ $? -ne 0 ]; then
-		echo "${___PROJECTNAME____FAILURE_TEXT_COLOR}Error moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____FAILURE_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+		echo "${___PROJECTNAME____FAILURE_TEXT_COLOR}Error moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____FAILURE_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets${___PROJECTNAME____FAILURE_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 		unset_variables
 		exit 1
 	fi
 
-	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____SUCCESS_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Assets.xcassets${___PROJECTNAME____SUCCESS_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Assets.xcassets${___PROJECTNAME____SUCCESS_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 fi
 
 # Moving LaunchScreen.storyboard
-echo "\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}Moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____DEFAULT_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+echo "\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}Moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____DEFAULT_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____DEFAULT_TEXT_COLOR}."
 
 if [ ! -d "./___PROJECTNAME___/Base.lproj" ]; then
-	echo "${___PROJECTNAME____WARNING_TEXT_COLOR}Already ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____WARNING_TEXT_COLOR} file moved to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+	echo "${___PROJECTNAME____WARNING_TEXT_COLOR}Already ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____WARNING_TEXT_COLOR} file moved to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____WARNING_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 else
 	___PROJECTNAME____LAUNCHSCREEN_FILE_UUID=`sed -n '/LaunchScreen.storyboard/{s/.*fileRef \= \(.*\) \/.*/\1/p;}' ___PROJECTNAME___.xcodeproj/project.pbxproj`
 
@@ -197,12 +197,12 @@ else
 	mv ___PROJECTNAME___/Base.lproj ___PROJECTNAME___/Resources/Base.lproj
 
 	if [ $? -ne 0 ]; then
-		echo "${___PROJECTNAME____FAILURE_TEXT_COLOR}Error moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____FAILURE_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+		echo "${___PROJECTNAME____FAILURE_TEXT_COLOR}Error moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____FAILURE_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____FAILURE_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 		unset_variables
 		exit 1
 	fi
 
-	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____SUCCESS_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success moving ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____SUCCESS_TEXT_COLOR} file to ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Base.lproj/LaunchScreen.storyboard${___PROJECTNAME____SUCCESS_TEXT_COLOR}.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 fi
 
 # Setting Info.plist file path in project build settings
@@ -222,7 +222,22 @@ else
 	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success setting ${___PROJECTNAME____FILE_PROJECT_COLOR}___PROJECTNAME___/Resources/Info.plist${___PROJECTNAME____SUCCESS_TEXT_COLOR} path to build setting in project.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 fi
 
-echo "\n${___PROJECTNAME____WARNING_TEXT_COLOR}[!] This project is not supports multiple scenes. If you want to support multiple scenes, modify property \"UIApplicationSceneManifest\" in Info.plist and add SceneDelegate.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+echo "\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}Setting \"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES\" flag to inherit in project build settings."
+if [ `sed -n '/\tALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES \= /p' ___PROJECTNAME___.xcodeproj/project.pbxproj | wc -l` -lt 2 ]; then
+	echo "${___PROJECTNAME____WARNING_TEXT_COLOR}Already set \"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES\" flag to inherit in project build settings.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+else
+	sed -i '' -e '/\tALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES \= /d' ___PROJECTNAME___.xcodeproj/project.pbxproj
+
+	if [ $? -ne 0 ]; then
+		echo "${___PROJECTNAME____FAILURE_TEXT_COLOR}Error setting \"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES\" flag to inherit in project build settings.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+		unset_variables
+		exit 1
+	fi
+
+	echo "${___PROJECTNAME____SUCCESS_TEXT_COLOR}Success setting \"ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES\" flag to inherit in project build settings.${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
+fi
+
+echo "\n${___PROJECTNAME____WARNING_TEXT_COLOR}[!] This project is not supports multiple scenes. If you want to support multiple scenes, modify property \"UIApplicationSceneManifest\" in Info.plist and add SceneDelegate.\n${___PROJECTNAME____DEFAULT_TEXT_COLOR}"
 
 unset_variables
 
