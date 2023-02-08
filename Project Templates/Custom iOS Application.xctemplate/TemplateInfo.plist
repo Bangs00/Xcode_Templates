@@ -27,6 +27,7 @@
 		<string>Presentation/ExampleScene/Flow/ExampleFlowCoordinator.swift</string>
 		<string>Presentation/ExampleScene/Example/ViewModel/ExampleViewModel.swift</string>
 		<string>Presentation/ExampleScene/Example/View/ExampleViewController.swift</string>
+		<string>Presentation/ExampleScene/Example/View/ExampleViewController.xib</string>
 		<string>Presentation/Utils/Extension/UIApplication+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UITableViewCell+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UICollectionViewCell+Ext.swift</string>
@@ -141,6 +142,18 @@
 		<dict>
 			<key>Path</key>
 			<string>ExampleViewController.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>ExampleScene</string>
+				<string>Example</string>
+				<string>View</string>
+			</array>
+		</dict>
+		<key>Presentation/ExampleScene/Example/View/ExampleViewController.xib</key>
+		<dict>
+			<key>Path</key>
+			<string>ExampleViewController.xib</string>
 			<key>Group</key>
 			<array>
 				<string>Presentation</string>
