@@ -81,7 +81,7 @@ extension UIColor {
             self.init(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }
-
+    
     func toImage() -> UIImage? {
         UIGraphicsBeginImageContext(CGSize(width: 1.0, height: 1.0))
         guard let context = UIGraphicsGetCurrentContext() else { return nil }

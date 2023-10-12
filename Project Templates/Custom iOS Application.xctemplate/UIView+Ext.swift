@@ -13,7 +13,7 @@ extension UIView {
         // swiftlint:disable force_cast
         return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil)?.first as! T
     }
-
+    
     enum GradientDirectionType {
         case left
         case right

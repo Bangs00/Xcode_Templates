@@ -34,11 +34,11 @@ public final class DefaultRequestInterceptor: RequestInterceptor {
             completion(.doNotRetry)
             return
         }
-        print("========== RETRY COUNT: \(request.retryCount) ==========")
+        print("📙 RETRY COUNT: \(request.retryCount) 📙")
         // vvv Retry somethings here vvv
         
         refreshAccessToken { result in
-            print("========== RETRY COUNT: \(request.retryCount) END ==========")
+            print("📙 RETRY COUNT: \(request.retryCount) END 📙")
             if result {
                 completion(.retryWithDelay(1))
             } else {

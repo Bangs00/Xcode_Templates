@@ -14,7 +14,7 @@ extension String {
     }
 
     func truncated(_ maxCount: Int = 10) -> String {
-		return self.count > length ? "\(self.prefix(length))・・・" : self
+		return self.count > length ? "\(self.prefix(maxCount))・・・" : self
 	}
     
     func toDate(format: String) -> Date? {
