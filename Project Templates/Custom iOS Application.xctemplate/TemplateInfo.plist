@@ -28,15 +28,26 @@
 		<string>Presentation/ExampleScene/Example/ViewModel/ExampleViewModel.swift</string>
 		<string>Presentation/ExampleScene/Example/View/ExampleViewController.swift</string>
 		<string>Presentation/ExampleScene/Example/View/ExampleViewController.xib</string>
+		<string>Presentation/Components/BasicViewController.swift</string>
+		<string>Presentation/Components/BasicNavigationController.swift</string>
+		<string>Presentation/Components/BasicTableView.swift</string>
+		<string>Presentation/Utils/Utils.swift</string>
 		<string>Presentation/Utils/Extension/UIApplication+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UIDevice+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UIViewController+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UINavigationController+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UITableViewCell+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UICollectionViewCell+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UIView+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UITextField+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UIButton+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UISegmentedControl+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UIImage+Ext.swift</string>
 		<string>Presentation/Utils/Extension/UIColor+Ext.swift</string>
+		<string>Presentation/Utils/Extension/UIFont+Ext.swift</string>
 		<string>Presentation/Utils/Extension/String+Ext.swift</string>
 		<string>Presentation/Utils/Extension/Date+Ext.swift</string>
+		<string>Presentation/Utils/Extension/TimeInterval+Ext.swift</string>
 		<string>Presentation/Utils/Protocol/StoryboardInstantiable.swift</string>
 		<string>Domain/Entities/ExampleEntities.swift</string>
 		<string>Domain/UseCases/ExampleUseCase.swift</string>
@@ -162,10 +173,83 @@
 				<string>View</string>
 			</array>
 		</dict>
+		<key>Presentation/Components/BasicViewController.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>BasicViewController.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Components</string>
+			</array>
+		</dict>
+		<key>Presentation/Components/BasicNavigationController.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>BasicNavigationController.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Components</string>
+			</array>
+		</dict>
+		<key>Presentation/Components/BasicTableView.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>BasicTableView.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Components</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Utils.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>Utils.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+			</array>
+		</dict>
 		<key>Presentation/Utils/Extension/UIApplication+Ext.swift</key>
 		<dict>
 			<key>Path</key>
 			<string>UIApplication+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Extension/UIDevice+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UIDevice+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Extension/UIViewController+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UIViewController+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Extension/UINavigationController+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UINavigationController+Ext.swift</string>
 			<key>Group</key>
 			<array>
 				<string>Presentation</string>
@@ -206,10 +290,32 @@
 				<string>Extension</string>
 			</array>
 		</dict>
+		<key>Presentation/Utils/Extension/UITextField+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UITextField+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
 		<key>Presentation/Utils/Extension/UIButton+Ext.swift</key>
 		<dict>
 			<key>Path</key>
 			<string>UIButton+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Extension/UISegmentedControl+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UISegmentedControl+Ext.swift</string>
 			<key>Group</key>
 			<array>
 				<string>Presentation</string>
@@ -239,6 +345,17 @@
 				<string>Extension</string>
 			</array>
 		</dict>
+		<key>Presentation/Utils/Extension/UIFont+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>UIFont+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
 		<key>Presentation/Utils/Extension/String+Ext.swift</key>
 		<dict>
 			<key>Path</key>
@@ -254,6 +371,17 @@
 		<dict>
 			<key>Path</key>
 			<string>Date+Ext.swift</string>
+			<key>Group</key>
+			<array>
+				<string>Presentation</string>
+				<string>Utils</string>
+				<string>Extension</string>
+			</array>
+		</dict>
+		<key>Presentation/Utils/Extension/TimeInterval+Ext.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>TimeInterval+Ext.swift</string>
 			<key>Group</key>
 			<array>
 				<string>Presentation</string>

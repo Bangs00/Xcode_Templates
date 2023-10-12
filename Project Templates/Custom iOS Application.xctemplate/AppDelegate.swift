@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppAppearance.setupAppearance()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController()
+        let navigationController = BasicNavigationController()
         
         window?.rootViewController = navigationController
         appFlowCoordinator = AppFlowCoordinator(navigationController: navigationController,

@@ -12,6 +12,10 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "\(self)_Localized")
     }
+
+    func truncated(_ maxCount: Int = 10) -> String {
+		return self.count > length ? "\(self.prefix(length))・・・" : self
+	}
     
     func toDate(format: String) -> Date? {
         let formatter = DateFormatter()

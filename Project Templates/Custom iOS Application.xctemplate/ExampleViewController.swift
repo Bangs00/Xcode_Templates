@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
-class ExampleViewController: UIViewController, StoryboardInstantiable {
+class ExampleViewController: BasicViewController, StoryboardInstantiable {
     // MARK: - Outlets
 
     // MARK: - Vairables
+    private var disposeBag: DisposeBag = DisposeBag()
     private var viewModel: ExampleViewModel!
     
     // MARK: - Life Cycles
@@ -24,6 +26,8 @@ class ExampleViewController: UIViewController, StoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.initDelegates()
+        self.initLayouts()
         bind(to: viewModel)
         viewModel.viewDidLoad()
     }
@@ -31,7 +35,26 @@ class ExampleViewController: UIViewController, StoryboardInstantiable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        viewModel.viewWillAppear()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+        viewModel.viewDidAppear()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+
+        viewModel.viewWillDisappear()
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+
+        viewModel.viewDidDisappear()
+	}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,6 +66,16 @@ class ExampleViewController: UIViewController, StoryboardInstantiable {
 
     // MARK: - Actions
 
+}
+
+extension ExampleViewController {
+    private func initDelegates() {
+
+    }
+
+    private func initLayouts() {
+
+    }
 }
 
 

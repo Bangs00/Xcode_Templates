@@ -11,5 +11,7 @@
 	</dict>
 	<key>ApiBaseURL</key>
 	<string>$(API_BASE_URL)</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

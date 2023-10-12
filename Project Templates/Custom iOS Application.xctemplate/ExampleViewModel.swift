@@ -42,23 +42,23 @@ class DefaultExampleViewModel: ExampleViewModel {
 // MARK: - INPUT. View event methods
 extension DefaultExampleViewModel {
     func viewDidLoad() {
-        print("ExampleViewModelInput:: viewDidLoad")
+        customLog("ExampleViewModelInput:: viewDidLoad")
     }
 
     func viewWillAppear() {
-        print("ExampleViewModelInput:: viewWillAppear")
+        customLog("ExampleViewModelInput:: viewWillAppear")
     }
 
     func viewDidAppear() {
-        print("ExampleViewModelInput:: viewDidAppear")
+        customLog("ExampleViewModelInput:: viewDidAppear")
     }
 
     func viewWillDisappear() {
-        print("ExampleViewModelInput:: viewWillDisappear")
+        customLog("ExampleViewModelInput:: viewWillDisappear")
     }
 
     func viewDidDisappear() {
-        print("ExampleViewModelInput:: viewDidDisappear")
+        customLog("ExampleViewModelInput:: viewDidDisappear")
     }
 }
 

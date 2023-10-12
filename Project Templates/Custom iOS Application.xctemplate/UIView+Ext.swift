@@ -13,6 +13,38 @@ extension UIView {
         // swiftlint:disable force_cast
         return Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil)?.first as! T
     }
+
+    enum GradientDirectionType {
+        case left
+        case right
+        case top
+        case bottom
+    }
+    
+    func makeGradient(colors: [UIColor], direction: GradientDirectionType) {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        
+        gradient.colors = colors.map({ color in
+            return color.cgColor
+        })
+        switch direction {
+        case .left:
+            gradient.startPoint = .init(x: 1.0, y: 0.5)
+            gradient.endPoint = .init(x: 0.0, y: 0.5)
+        case .right:
+            gradient.startPoint = .init(x: 0.0, y: 0.5)
+            gradient.endPoint = .init(x: 1.0, y: 0.5)
+        case .top:
+            gradient.startPoint = .init(x: 0.5, y: 1.0)
+            gradient.endPoint = .init(x: 0.5, y: 0.0)
+        case .bottom:
+            gradient.startPoint = .init(x: 0.5, y: 0.0)
+            gradient.endPoint = .init(x: 0.5, y: 1.0)
+        }
+        
+        self.layer.addSublayer(gradient)
+    }
 }
 
 @IBDesignable

@@ -157,7 +157,8 @@ public final class DefaultNetworkErrorLogger: NetworkErrorLogger {
     public init() { }
     
     public func log(request: URLRequest) {
-        print("========== REQUEST ==========")
+        #if DEBUG
+        print("📘 REQUEST 📘")
         print("request: \(request.url!)")
         print("headers: \(request.allHTTPHeaderFields!)")
         print("method: \(request.httpMethod!)")
@@ -166,22 +167,29 @@ public final class DefaultNetworkErrorLogger: NetworkErrorLogger {
         } else if let httpBody = request.httpBody, let resultString = String(data: httpBody, encoding: .utf8) {
             print("body: \(String(describing: resultString))")
         }
-        print("========== REQUEST END ==========")
+        print("📘 REQUEST END 📘")
+        #endif
     }
     
     public func log(responseData data: Data?, response: URLResponse?) {
         guard let data = data else { return }
-        if let dataDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-            print("========== RESPONSE ==========")
-            print("responseData: \(String(describing: dataDict))")
-            print("========== RESPONSE END ==========")
-        }
+        #if DEBUG
+		if let dataDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+			print("📗 RESPONSE 📗")
+			print("responseData:",
+				  NSString(cString: "\(dataDict)".cString(using: .utf8) ?? [],
+						   encoding: NSNonLossyASCIIStringEncoding) ?? "")
+			print("📗 RESPONSE END 📗")
+		}
+        #endif
     }
     
     public func log(error: Error) {
-        print("========== ERROR LOGGER ==========")
-        print("\(error)")
-        print("========== ERROR LOGGER END ==========")
+        #if DEBUG
+		print("📕 ERROR LOGGER 📕")
+		print("\(error.localizedDescription)")
+		print("📕 ERROR LOGGER END 📕")
+		#endif
     }
 }
 
