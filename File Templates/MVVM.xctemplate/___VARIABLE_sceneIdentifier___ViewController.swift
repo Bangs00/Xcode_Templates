@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, StoryboardInstantiable {
     // MARK: - Outlets
 
     // MARK: - Vairables
+    private var disposeBag: DisposeBag = DisposeBag()
     private var viewModel: ___VARIABLE_sceneIdentifier___ViewModel!
-    
 
     // MARK: - Life Cycles
     class func create(with viewModel: ___VARIABLE_sceneIdentifier___ViewModel) -> ___VARIABLE_sceneIdentifier___ViewController {
@@ -26,15 +27,35 @@ class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, Storyboard
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.initDelegates()
+        self.initLayouts()
         bind(to: viewModel)
         viewModel.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         viewModel.viewWillAppear()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+        viewModel.viewDidAppear()
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+
+        viewModel.viewWillDisappear()
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+
+        viewModel.viewDidDisappear()
+	}
     
     func bind(to viewModel: ___VARIABLE_sceneIdentifier___ViewModel) {
 
@@ -44,6 +65,15 @@ class ___VARIABLE_sceneIdentifier___ViewController: UIViewController, Storyboard
 
 }
 
+extension ___VARIABLE_sceneIdentifier___ViewController {
+    private func initDelegates() {
+
+    }
+
+    private func initLayouts() {
+
+    }
+}
 
 /*
  UICollectionView, UITableView 프로토콜 사용시 아래 주석 해제 후 사용하시면 됩니다.

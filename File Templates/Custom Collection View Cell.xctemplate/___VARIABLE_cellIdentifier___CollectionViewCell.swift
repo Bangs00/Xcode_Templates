@@ -8,11 +8,15 @@
 
 import UIKit
 
+struct ___VARIABLE_cellIdentifier___CollectionViewCellData {
+
+}
+
 class ___VARIABLE_cellIdentifier___CollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
 
     // MARK: - Variables
-    private var cellData: Any? = nil { // 타입은 재정의해서 사용해주세요.
+    private var cellData: ___VARIABLE_cellIdentifier___CollectionViewCellData? = nil { // 타입은 재정의해서 사용해주세요.
         didSet {
             // 데이터 들어오면 여기서 레이아웃 설정하시면 됩니다.
         }
@@ -34,11 +38,11 @@ class ___VARIABLE_cellIdentifier___CollectionViewCell: UICollectionViewCell {
 }
 
 extension ___VARIABLE_cellIdentifier___CollectionViewCell {
-    func configure(with cellData: Any) {
+    func configure(with cellData: ___VARIABLE_cellIdentifier___CollectionViewCellData) {
         self.cellData = cellData
     }
     // Dynamic Height
-    static func fittingSize(_ cellData: Any, width: CGFloat) -> CGSize {
+    static func fittingSize(_ cellData: ___VARIABLE_cellIdentifier___CollectionViewCellData, width: CGFloat) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }
@@ -48,7 +52,7 @@ extension ___VARIABLE_cellIdentifier___CollectionViewCell {
         return cell.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
     }
     // Dynamic Width
-    static func fittingSize(_ cellData: Any, height: CGFloat) -> CGSize {
+    static func fittingSize(_ cellData: ___VARIABLE_cellIdentifier___CollectionViewCellData, height: CGFloat) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }
@@ -58,7 +62,7 @@ extension ___VARIABLE_cellIdentifier___CollectionViewCell {
         return cell.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .required)
     }
     // Dynamic Width, Height
-    static func fittingSize(_ cellData: Any) -> CGSize {
+    static func fittingSize(_ cellData: ___VARIABLE_cellIdentifier___CollectionViewCellData) -> CGSize {
         guard let cell = Bundle.main.loadNibNamed("\(___VARIABLE_cellIdentifier___CollectionViewCell.self)", owner: self, options: nil)?.first as? ___VARIABLE_cellIdentifier___CollectionViewCell else {
             return .zero
         }

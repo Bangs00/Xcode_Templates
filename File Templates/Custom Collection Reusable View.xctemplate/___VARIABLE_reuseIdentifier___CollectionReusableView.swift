@@ -8,11 +8,15 @@
 
 import UIKit
 
+struct ___VARIABLE_reuseIdentifier___CollectionReusableViewModel {
+
+}
+
 class ___VARIABLE_reuseIdentifier___CollectionReusableView: UICollectionReusableView {
     // MARK: - Outlets
 
     // MARK: - Variables
-    private var viewModel: Any? = nil { // 타입은 재정의해서 사용해주세요.
+    private var viewModel: ___VARIABLE_reuseIdentifier___CollectionReusableViewModel? = nil { // 타입은 재정의해서 사용해주세요.
         didSet {
             // 데이터 들어오면 여기서 레이아웃 설정하시면 됩니다.
         }
@@ -34,11 +38,11 @@ class ___VARIABLE_reuseIdentifier___CollectionReusableView: UICollectionReusable
 }
 
 extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
-    func configure(with viewModel: Any) {
+    func configure(with viewModel: ___VARIABLE_reuseIdentifier___CollectionReusableViewModel) {
         self.viewModel = viewModel
     }
     // Dynamic Height
-    static func fittingSize(_ viewModel: Any, width: CGFloat) -> CGSize {
+    static func fittingSize(_ viewModel: ___VARIABLE_reuseIdentifier___CollectionReusableViewModel, width: CGFloat) -> CGSize {
         guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
             return .zero
         }
@@ -48,7 +52,7 @@ extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
         return view.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
     }
     // Dynamic Width
-    static func fittingSize(_ viewModel: Any, height: CGFloat) -> CGSize {
+    static func fittingSize(_ viewModel: ___VARIABLE_reuseIdentifier___CollectionReusableViewModel, height: CGFloat) -> CGSize {
         guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
             return .zero
         }
@@ -58,7 +62,7 @@ extension ___VARIABLE_reuseIdentifier___CollectionReusableView {
         return view.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .fittingSizeLevel, verticalFittingPriority: .required)
     }
     // Dynamic Width, Height
-    static func fittingSize(_ viewModel: Any) -> CGSize {
+    static func fittingSize(_ viewModel: ___VARIABLE_reuseIdentifier___CollectionReusableViewModel) -> CGSize {
         guard let view = Bundle.main.loadNibNamed("\(___VARIABLE_reuseIdentifier___CollectionReusableView.self)", owner: self, options: nil)?.first as? ___VARIABLE_reuseIdentifier___CollectionReusableView else {
             return .zero
         }

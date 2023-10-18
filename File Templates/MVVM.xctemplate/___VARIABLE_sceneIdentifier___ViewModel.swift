@@ -39,22 +39,22 @@ class Default___VARIABLE_sceneIdentifier___ViewModel: ___VARIABLE_sceneIdentifie
 // MARK: - INPUT. View event methods
 extension Default___VARIABLE_sceneIdentifier___ViewModel {
     func viewDidLoad() {
-        print("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidLoad")
+        customLog("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidLoad")
     }
 
     func viewWillAppear() {
-        print("___VARIABLE_sceneIdentifier___ViewModelInput:: viewWillAppear")
+        customLog("___VARIABLE_sceneIdentifier___ViewModelInput:: viewWillAppear")
     }
 
     func viewDidAppear() {
-        print("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidAppear")
+        customLog("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidAppear")
     }
 
     func viewWillDisappear() {
-        print("___VARIABLE_sceneIdentifier___ViewModelInput:: viewWillDisappear")
+        customLog("___VARIABLE_sceneIdentifier___ViewModelInput:: viewWillDisappear")
     }
 
     func viewDidDisappear() {
-        print("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidDisappear")
+        customLog("___VARIABLE_sceneIdentifier___ViewModelInput:: viewDidDisappear")
     }
 }
