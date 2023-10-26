@@ -25,5 +25,5 @@ class BasicTableView: UITableView {
 	override func layoutSubviews() {
 		self.invalidateIntrinsicContentSize()
 		super.layoutSubviews()
-	}override 
+	} 
 }
